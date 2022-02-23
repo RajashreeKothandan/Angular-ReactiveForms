@@ -147,8 +147,8 @@
                  [ngClass]="{'is-invalid': (customerForm.get('rating')?.touched || 
                                              customerForm.get('rating')?.dirty) && 
                                              !customerForm.get('rating')?.valid }" />
-          <span class="invalid-feedback">
-            <span *ngIf="customerForm.get('rating')?.errors?.range">
+          <span class="invalid-feedback"><div>{{'bool'}}{{customerForm.get('rating')?.errors?.invalidRate}}</div>
+            <span *ngIf="customerForm.get('rating')?.errors?.invalidRate">
               Please rate your experience from 1 to 5.
             </span>
           </span>
